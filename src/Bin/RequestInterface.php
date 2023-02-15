@@ -2,5 +2,5 @@
 namespace App\Bin;
 
 interface RequestInterface {
-    public function request();    
+    public function request($bin);    
 }

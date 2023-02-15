@@ -14,5 +14,12 @@ class Commission {
         $this->transform = $transform;
     }
     
-    function calc($line) {}
+    function calc($line) {
+        $data = json_decode($line, true);
+        if (!isset($data)) {
+            return;
+        } 
+        
+        $this->request->request($data['bin']);
+    }
 }
