@@ -1,6 +1,8 @@
 <?php
+
 namespace App\Bin;
 
-interface TransformerInterface {
+interface TransformerInterface
+{
     public function transform();
 }

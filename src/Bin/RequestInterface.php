@@ -1,6 +1,8 @@
 <?php
+
 namespace App\Bin;
 
-interface RequestInterface {
-    public function request($bin);    
+interface RequestInterface
+{
+    public function request($bin);
 }
