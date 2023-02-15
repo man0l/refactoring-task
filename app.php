@@ -5,13 +5,19 @@ use App\Commission;
 use App\Bin\BinListRequest;
 use App\Bin\BinListTransformer;
 use App\TransactionData;
+use App\Rates\ExchangeRatesApiRequest;
+use App\Rates\ExchangeRatesApiTransformer;
 
 $transactionData = new TransactionData($argv[1]);
 $transactionData->read();
+$allCurrencies = $transactionData->getAllCurrencies();
 $lines = $transactionData->getLines();
 
-$commission = new Commission(new BinListRequest(), new BinListTransformer());
+$commission = new Commission(
+    new BinListRequest(), new BinListTransformer(),
+    new ExchangeRatesApiRequest(), new ExchangeRatesApiTransformer()
+);
 
-foreach ($lines as $line) {    
-    $commission->calc($line);    
+foreach ($lines as $line) {
+    $commission->calc($line, $allCurrencies);
 }
