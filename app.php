@@ -19,5 +19,6 @@ $commission = new Commission(
 );
 
 foreach ($lines as $line) {
-    $commission->calc($line, $allCurrencies);
+    echo $commission->calc($line, $allCurrencies), "\n";
+
 }
