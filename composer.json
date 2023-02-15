@@ -1,0 +1,16 @@
+{
+    "name": "manol/refactoring-task",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Manol\\RefactoringTask\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Manol Trendafilov",
+            "email": "manol.trendafilov@gmail.com"
+        }
+    ],
+    "require": {}
+}
