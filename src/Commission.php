@@ -10,7 +10,7 @@ use App\Rates\RatesTransformerInterface;
 
 class Commission
 {
-    private const KEY_DATA_BIN = 'bin';
+    public const KEY_DATA_BIN = 'bin';
     private const KEY_DATA_AMOUNT = 'amount';
     private const KEY_DATA_CURRENCY = 'currency';
 
@@ -43,6 +43,7 @@ class Commission
     public function calc(string $line, array $supportedCurencies = [])
     {
         $data = json_decode($line, true);
+        var_dump($data);
         if (!isset($data)) {
             return null;
         }
