@@ -14,5 +14,5 @@ class Commission {
         $this->transform = $transform;
     }
     
-    function calc() {}
+    function calc($line) {}
 }
