@@ -43,7 +43,7 @@ class Commission
     public function calc(string $line, array $supportedCurencies = [])
     {
         $data = json_decode($line, true);
-        
+
         if (!isset($data)) {
             return null;
         }
